@@ -98,7 +98,10 @@ Next you'll use the [AWS Amplify Console][amplify-console] to deploy the website
 1. From the dropdown select the *Repository* and *Branch* created today
     
     ![Amplify Repository configuration](../images/amplify-console-repository-setup.png)
-1. On the "Configure build settings" page, select *Read-only access with an existing service role* and from the dropdown select *AmplifyServiceRole*. Leave the rest of the defaults and select **Next**
+1. On the "Configure build settings" page, select *Read-only access with an existing service role* and from the dropdown select *AmplifyServiceRole*. Leave the rest of the defaults and select **Next**.
+
+    ![Amplify Service Role configuration](../images/amplify-service-role-config.png)
+
 1. On the "Review" page select **Save and deploy**
     
     The process takes a couple of minutes for Amplify Console to create the neccesary resources and to deploy your code.
