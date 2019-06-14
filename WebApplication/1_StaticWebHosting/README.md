@@ -32,8 +32,9 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 ![Region selection screenshot](../images/region-selection.png)
 
 ### Create the git repository
-You have two options for this first step which is to either use [AWS CodeCommit][commit] or [GitHub][github] to host your site's repository. The choice is yours. If you have a GitHub account feel free to use that. Otherwise [CodeCommit is included in the AWS Free Tier][codecommit-free]
-#### Using CodeCommit
+In this step you will use [AWS CodeCommit][commit] to host your site's repository. [CodeCommit is included in the AWS Free Tier][codecommit-free]
+
+#### Setting Up CodeCommit
 The AWS Cloud9 development environment comes with AWS managed temporary credentials that are associated with your IAM user. You use these credentials with the AWS CLI credential helper. Enable the credential helper by running the following two commands in the terminal of your Cloud9 environment.
 ```bash
 git config --global credential.helper '!aws codecommit credential-helper $@'
@@ -55,13 +56,6 @@ Now from your Cloud9 development environment:
     warning: You appear to have cloned an empty repository.
     ec2-user:~/environment $ 
     ```
-
-#### Using GitHub
-**:white_check_mark: Step-by-step directions**
-1. Follow the instructions on [GitHub][github] to [Create a repository][create-repo]. NOTE: You should not create a first commit, just create the repository.
-1. Clone the repository locally using your GitHub credentials
-    1. If you do not have credentially locally, or want to use Cloud9 for today's lab, follow these steps to [Generating a new SSH key and adding it to the ssh-agent][github-new-sshkey]
-    1. [Clone the repository][github-clone]
 
 #### Populate the git repository
 Once your git repository is created and cloned locally, you'll need to pull in the files for your website and sync them up to the repository. 
@@ -100,12 +94,11 @@ Next you'll use the [AWS Amplify Console][amplify-console] to deploy the website
 **:white_check_mark: Step-by-step directions**
 1. Launch the [Amplify Console console page][amplify-console-console]
 1. Under "Deploy", select **Get Started**
-1. Select the *Repository service provider* used today and select **Next**
-    1. If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account
+1. Select the *AWS CodeCommit* and select **Next**
 1. From the dropdown select the *Repository* and *Branch* created today
     
     ![Amplify Repository configuration](../images/amplify-console-repository-setup.png)
-1. On the "Configure build settings" page leave all the defaults and select **Next**
+1. On the "Configure build settings" page, select *Read-only access with an existing service role* and from the dropdown select *AmplifyServiceRole*. Leave the rest of the defaults and select **Next**
 1. On the "Review" page select **Save and deploy**
     
     The process takes a couple of minutes for Amplify Console to create the neccesary resources and to deploy your code.
