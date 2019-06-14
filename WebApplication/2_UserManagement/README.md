@@ -101,6 +101,8 @@ The [/js/config.js][configjs] file contains settings for the user pool ID, app c
 
 ## Implementation Validation
 
+**Note:** Verify that your Wild Rydes application has completed building in the Amplify Console before you move on to the next step.
+
 **:white_check_mark: Step-by-step directions**
 1. Visit `register.html` under your website domain, or choose the **Giddy Up!** button on the homepage of your site.
 
