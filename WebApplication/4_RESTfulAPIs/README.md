@@ -160,7 +160,7 @@ Update the /js/config.js file in your website deployment to include the invoke U
 
 ### Next
 
-:white_check_mark: Congratulations! You've completed this workshop. We value your feedback. Please complete this survey:
+:white_check_mark: Congratulations! You've completed this workshop. Please take a minute to complete our survey by following the link that your instructor has provided you.
 
 [amplify-console]: https://aws.amazon.com/amplify/console/
 [amplify-console-console]: https://console.aws.amazon.com/amplify/home
